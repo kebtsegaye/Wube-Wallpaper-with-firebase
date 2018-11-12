@@ -48,6 +48,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         String image = images.get(position);
         String title = titles.get(position);
+
         holder.textViewName.setText(title);
         Glide.with(context).load(image).into(holder.imageView);
     }
