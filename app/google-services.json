@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "479382579832",
+    "firebase_url": "https://jkkj-fe8d9.firebaseio.com",
+    "project_id": "jkkj-fe8d9",
+    "storage_bucket": "jkkj-fe8d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479382579832:android:b6b8d58e0a7111bd",
+        "android_client_info": {
+          "package_name": "com.kebek.wubewallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479382579832-1k2sqrbhvsk2fpg5h4rj4me7lo4urguh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7v7MZUNh0DX6_G1Zqu78Q73132d_Kl_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
