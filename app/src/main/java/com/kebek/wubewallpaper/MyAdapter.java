@@ -2,6 +2,7 @@ package com.kebek.wubewallpaper;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,8 +23,7 @@ import java.util.Map;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private Context context;
-   // private List<Upload> uploads;
-    private List<String> images;
+    private List<String> images;  //
     private List<String> titles;
 
 
@@ -44,13 +44,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
 
-        String image = images.get(position);
+        final String image = images.get(position);
         String title = titles.get(position);
 
         holder.textViewName.setText(title);
         Glide.with(context).load(image).into(holder.imageView);
+
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(context, full_image.class);
+                intent.putExtra("image_url",image);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -69,5 +78,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             textViewName = (TextView) itemView.findViewById(R.id.textViewName);
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
         }
+
+
     }
 }
