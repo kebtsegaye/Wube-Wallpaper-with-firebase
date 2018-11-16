@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#B3000000"
     tools:context=".full_image">
 
-<com.github.chrisbanes.photoview.PhotoView
-    android:id="@+id/photo_view"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"/>
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter" />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="3"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/Share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Share"
+                android:textSize="19dp"/>
+
+            <Button
+                android:id="@+id/download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="19dp"
+                android:text="Download" />
+
+            <Button
+                android:id="@+id/set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="19dp"
+                android:text="Set" />
+        </LinearLayout>
+
+</RelativeLayout>

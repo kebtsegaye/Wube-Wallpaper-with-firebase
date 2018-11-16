@@ -27,7 +27,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private List<String> titles;
 
 
-    //public MyAdapter(Context context, List<Upload> uploads) {
         public MyAdapter(Context context, List<String> uploads, List<String> titles) {
 
             this.images = uploads;
@@ -51,6 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         holder.textViewName.setText(title);
         Glide.with(context).load(image).into(holder.imageView);
+
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override

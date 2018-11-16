@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         //recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // makes the view in activity main to have two columns
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(mLayoutManager);
 
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
 
-        Toast.makeText(this, "before database reached", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "before database reached", Toast.LENGTH_SHORT).show();
 
         mDatabase = FirebaseDatabase.getInstance().getReference().getRoot();
 
